@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sumit Chaturvedi - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Navbar (Fixed at top) -->
+  <header class="navbar">
+    <div class="logo">Sumit Chaturvedi</div>
+    <nav>
+      <ul>
+        <li><a class="nav-link" href="#home">Home</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li><a class="nav-link" href="#experience">Experience</a></li> 
+        <li><a class="nav-link" href="#projects">Projects</a></li>
+        <li><a class="nav-link" href="#education">Education</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+    
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section (Mac Terminal Style, Fullscreen) -->
+  <section id="home" class="section full-section">
+    <div class="terminal">
+        <div class="terminal-header">
+            <div class="buttons">
+                <span class="red"></span>
+                <span class="yellow"></span>
+                <span class="green"></span>
+            </div>
+            <p class="terminal-title">bash — sumit@portfolio</p>
+        </div>
+        <div class="terminal-body">
+            <p class="command" id="line1"></p> <!-- Typing Line 1 -->
+            <p class="command" id="line2"></p> <!-- Typing Line 2 -->
+            <p class="command" id="line3"></p> <!-- Typing Line 3 -->
+            <div class="terminal-buttons">
+                <button class="btn" onclick="scrollToSection('contact')">Get in Touch</button>
+                <a class="btn" href="resume.pdf" download>Download Resume</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    
+  <!-- About Section (Fullscreen) -->
+  <section id="about" class="section full-section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        Highly motivated and detail-oriented Computer Science graduate with a strong foundation in programming, system administration, and server management. Skilled in HTML, CSS, SQL, Python, Linux, and Docker. Adept at technical troubleshooting and digital marketing.
+      </p>
+      <div class="stats-container">
+        <div class="stat-box">
+          <i class="fas fa-code"></i>
+          <h3>50+</h3>
+          <p>CI/CD Pipelines</p>
+        </div>
+        <div class="stat-box">
+          <i class="fas fa-cloud"></i>
+          <h3>100+</h3>
+          <p>Cloud Deployments</p>
+        </div>
+        <div class="stat-box">
+          <i class="fas fa-server"></i>
+          <h3>30+</h3>
+          <p>Infrastructure Projects</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section (Fullscreen) -->
+  <section id="skills" class="section full-section">
+    <div class="container">
+      <h2>My Skills</h2>
+      <div class="skills-container">
+        <div class="skill">
+          <i class="fas fa-code"></i>
+          <h3>Programming</h3>
+          <p>HTML, CSS, JavaScript, Python, PHP</p>
+        </div>
+        <div class="skill">
+          <i class="fas fa-database"></i>
+          <h3>Databases</h3>
+          <p>MySQL, SQLite</p>
+        </div>
+        <div class="skill">
+          <i class="fas fa-server"></i>
+          <h3>DevOps</h3>
+          <p>Docker, Kubernetes, CI/CD Pipelines</p>
+        </div>
+        <div class="skill">
+          <i class="fas fa-cloud"></i>
+          <h3>Cloud & Hosting</h3>
+          <p>AWS, Azure, Apache, Nginx</p>
+        </div>
+        <div class="skill">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Security</h3>
+          <p>SSL, Firewalls, Server Hardening</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+<section id="experience" class="section full-section">
+  <div class="container">
+    <h2>Professional Experience</h2>
+    <div class="experience-container">
+      
+      <!-- Technical Support Intern -->
+      <div class="experience-card">
+        <h3>Technical Support Intern – SupportHives</h3>
+        <p><strong>2024 - 2025</strong></p>
+        <ul>
+          <li>Configured and managed web hosting environments using CWP, AA Panel, and Docker.</li>
+          <li>Provided technical support for website hosting, troubleshooting server issues, and ensuring optimal uptime.</li>
+          <li>Assisted in server security hardening and performed regular maintenance.</li>
+        </ul>
+      </div>
+
+      <!-- Social Media Coordinator -->
+      <div class="experience-card">
+        <h3>Social Media Coordinator – MVLU College</h3>
+        <p><strong>2023 - 2024</strong></p>
+        <ul>
+          <li>Created engaging content to promote college events and initiatives.</li>
+          <li>Collaborated with marketing and PR teams to execute integrated campaigns.</li>
+          <li>Managed social media postings, increasing engagement and online visibility.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Projects Section (Fullscreen) -->
+  <section id="projects" class="section full-section">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project-container">
+        <div class="project-card">
+          <h3>Website Deployment Projects</h3>
+          <p>
+            Successfully deployed and managed multiple websites, ensuring optimal performance, security, and scalability.<br>
+            <strong>Della.in Deployment:</strong> Configured and optimized hosting.<br>
+            <strong>Body and Mind Care Guides:</strong> Managed the deployment and hosting environment.<br>
+            <strong>Developer Guides 4 You:</strong> Fine-tuned server configurations for enhanced performance.
+          </p>
+        </div>
+        <div class="project-card">
+          <h3>Student Result Management System</h3>
+          <p>
+            Developed a system to streamline student records and result processing.<br>
+            • Login &amp; Sign-up system for secure access.<br>
+            • Admin Panel for managing records.<br>
+            <strong>Technologies:</strong> HTML, CSS, JavaScript, PHP, MySQL.
+          </p>
+        </div>
+        <div class="project-card">
+          <h3>Student Detail Management System</h3>
+          <p>
+            Designed and implemented a system using Tkinter and SQLite for efficient student record management.<br>
+            • Supports registration, updates, and deletion.<br>
+            • Search &amp; Filter capabilities.<br>
+            <strong>Technologies:</strong> Python (Tkinter), SQLite, PIL.
+          </p>
+        </div>
+        <div class="project-card">
+          <h3>Web Hosting Deployment for PHP Laravel &amp; WordPress</h3>
+          <p>
+            Successfully deployed and managed hosting for PHP Laravel and WordPress projects.<br>
+            • Server configuration, domain &amp; SSL management, performance optimization, and backups.<br>
+            <strong>Technologies:</strong> Apache, Nginx, MySQL, PHP, WordPress, Laravel, Docker.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+<section id="education">
+    <div class="container">
+        <h2>Education</h2>
+        <div class="education-container">
+            <div class="education-card">
+                <h3>Bachelor of Science (Computer Science)</h3>
+                <p>MVLU College (2021 - Present)</p>
+            </div>
+            <div class="education-card">
+                <h3>Secondary School</h3>
+                <p>RC Maruti English High School (2008 - 2020)</p>
+            </div>
+            <div class="education-card">
+                <h3>Higher Secondary School</h3>
+                <p>St Arnold English High School (2008 - 2020)</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <div class="contact-container">
+        <h2>Contact Me</h2>
+
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <div class="contact-text">
+                    <strong>Email:</strong>
+                    <a href="mailto:chaturvedisumitcs222320@gmail.com">chaturvedisumitcs222320@gmail.com</a>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <div class="contact-text">
+                    <strong>Phone:</strong> 8591256728
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="contact-text">
+                    <strong>Location:</strong> Andheri East, Mumbai, India
+                </div>
+            </div>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/sumit-awanish-chaturvedi-5911b0288/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/SumitChaturvedi-184" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+  <!-- Footer -->  
+  <footer>
+    <div class="footer-container">
+      <div class="footer-box quick-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#Professional-Experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+        </ul>
+      </div>
+      <div class="footer-box contact-info">
+        <h4>Contact</h4>
+        <p><a href="mailto:chaturvedisumitcs222320@gmail.com">chaturvedisumitcs222320@gmail.com</a></p>
+        <p><a href="tel:+918591256728">+91 8591256728</a></p>
+        <p>Mumbai, India</p>
+    </div>
+    
+      <div class="footer-box social-links">
+        <h4>Social</h4>
+        <a href="https://www.linkedin.com/in/sumit-awanish-chaturvedi-5911b0288/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/SumitChaturvedi-184" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Sumit Chaturvedi | DevOps Engineer</p>
+      <p>CI/CD Specialist &nbsp;&nbsp; Cloud Architect &nbsp;&nbsp; Security Expert</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
