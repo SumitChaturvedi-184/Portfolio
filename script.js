@@ -26,21 +26,26 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Smooth Scrolling for "Get in Touch" Button
-    document.querySelector(".btn.get-in-touch").addEventListener("click", function () {
-        const contactSection = document.getElementById("contact");
-        if (contactSection) {
+    // Function to scroll to a section smoothly
+    window.scrollToSection = function (sectionId) {
+        const targetSection = document.getElementById(sectionId);
+        if (targetSection) {
             window.scrollTo({
-                top: contactSection.offsetTop - 60, // Adjust for navbar height
+                top: targetSection.offsetTop - 60, // Adjust for navbar height
                 behavior: "smooth"
             });
         }
-    });
+    };
 
-    // View Resume Button (Opens in New Tab)
-    document.querySelector(".btn.view-resume").addEventListener("click", function () {
-        window.open("https://github.com/SumitChaturvedi-184/Portfolio/blob/main/Sumit%20Chaturvedi.pdf", "_blank");
-    });
+    // Function to toggle the resume display
+    window.toggleResume = function () {
+        const resumeContainer = document.getElementById("resume-container");
+        if (resumeContainer.style.display === "none" || resumeContainer.style.display === "") {
+            resumeContainer.style.display = "block"; // Show resume
+        } else {
+            resumeContainer.style.display = "none"; // Hide resume
+        }
+    };
 
     // Smooth scrolling for navbar links
     document.querySelectorAll('.nav-link').forEach(link => {
