@@ -52,4 +52,14 @@ document.addEventListener("DOMContentLoaded", function () {
             footerContainer.style.flexDirection = "row";
         }
     });
+
+    // Resume Toggle Feature
+    document.querySelector(".btn.view-resume").addEventListener("click", function () {
+        let resumeContainer = document.getElementById("resume-container");
+        if (resumeContainer.style.display === "none" || resumeContainer.style.display === "") {
+            resumeContainer.style.display = "block";
+        } else {
+            resumeContainer.style.display = "none";
+        }
+    });
 });
