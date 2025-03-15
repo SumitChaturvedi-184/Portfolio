@@ -26,39 +26,28 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Function to scroll to Contact section
-    document.getElementById("get-in-touch-btn").addEventListener("click", function () {
-        const contactSection = document.getElementById("contact");
-        if (contactSection) {
-            contactSection.scrollIntoView({ behavior: "smooth" });
+    // ✅ Fix "Get in Touch" Button (Scroll to Contact Section)
+    function scrollToSection(sectionId) {
+        const target = document.getElementById(sectionId);
+        if (target) {
+            window.scrollTo({
+                top: target.offsetTop - 60, // Adjust for navbar height
+                behavior: "smooth"
+            });
         }
-    });
+    }
 
-    // Function to toggle Resume visibility
-    document.getElementById("view-resume-btn").addEventListener("click", function () {
-        const resumeContainer = document.getElementById("resume-container");
-        resumeContainer.style.display = (resumeContainer.style.display === "none" || resumeContainer.style.display === "") 
-            ? "block" 
-            : "none";
-    });
+    // ✅ Fix "View Resume" Button (Show/Hide Resume)
+    function toggleResume() {
+        let resumeContainer = document.getElementById("resume-container");
+        if (resumeContainer.style.display === "none" || resumeContainer.style.display === "") {
+            resumeContainer.style.display = "block";
+        } else {
+            resumeContainer.style.display = "none";
+        }
+    }
 
-    // Smooth scrolling for navbar links
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', function (event) {
-            event.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-
-            if (targetSection) {
-                window.scrollTo({
-                    top: targetSection.offsetTop - 60, // Adjust for navbar height
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-
-    // Footer responsiveness
+    // Footer responsiveness on window resize
     window.addEventListener("resize", function () {
         let footerContainer = document.querySelector(".footer-container");
         if (footerContainer) {
