@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
         "> Automating infrastructure and streamlining deployments"
     ];
 
-    let index = 0;
     function typeLine(id, text, speed, callback) {
         let i = 0;
         function type() {
@@ -25,6 +24,22 @@ document.addEventListener("DOMContentLoaded", function () {
         typeLine("line2", lines[1], 50, function () {
             typeLine("line3", lines[2], 50);
         });
+    });
+
+    // Smooth Scrolling for "Get in Touch" Button
+    document.querySelector(".btn.get-in-touch").addEventListener("click", function () {
+        const contactSection = document.getElementById("contact");
+        if (contactSection) {
+            window.scrollTo({
+                top: contactSection.offsetTop - 60, // Adjust for navbar height
+                behavior: "smooth"
+            });
+        }
+    });
+
+    // View Resume Button (Opens in New Tab)
+    document.querySelector(".btn.view-resume").addEventListener("click", function () {
+        window.open("https://github.com/SumitChaturvedi-184/Portfolio/blob/main/Sumit%20Chaturvedi.pdf", "_blank");
     });
 
     // Smooth scrolling for navbar links
@@ -46,20 +61,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Footer responsiveness on window resize
     window.addEventListener("resize", function () {
         let footerContainer = document.querySelector(".footer-container");
-        if (window.innerWidth < 768) {
-            footerContainer.style.flexDirection = "column";
-        } else {
-            footerContainer.style.flexDirection = "row";
-        }
-    });
-
-    // Resume Toggle Feature
-    document.querySelector(".btn.view-resume").addEventListener("click", function () {
-        let resumeContainer = document.getElementById("resume-container");
-        if (resumeContainer.style.display === "none" || resumeContainer.style.display === "") {
-            resumeContainer.style.display = "block";
-        } else {
-            resumeContainer.style.display = "none";
+        if (footerContainer) {
+            footerContainer.style.flexDirection = window.innerWidth < 768 ? "column" : "row";
         }
     });
 });
