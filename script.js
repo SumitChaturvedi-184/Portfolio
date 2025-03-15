@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "> Automating infrastructure and streamlining deployments"
     ];
 
+    let index = 0;
     function typeLine(id, text, speed, callback) {
         let i = 0;
         function type() {
@@ -26,32 +27,29 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // ✅ Fix "Get in Touch" Button (Scroll to Contact Section)
-    function scrollToSection(sectionId) {
-        const target = document.getElementById(sectionId);
-        if (target) {
-            window.scrollTo({
-                top: target.offsetTop - 60, // Adjust for navbar height
-                behavior: "smooth"
-            });
-        }
-    }
+    // Smooth scrolling for navbar links
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href').substring(1); // Remove #
+            const targetSection = document.getElementById(targetId);
 
-    // ✅ Fix "View Resume" Button (Show/Hide Resume)
-    function toggleResume() {
-        let resumeContainer = document.getElementById("resume-container");
-        if (resumeContainer.style.display === "none" || resumeContainer.style.display === "") {
-            resumeContainer.style.display = "block";
-        } else {
-            resumeContainer.style.display = "none";
-        }
-    }
+            if (targetSection) {
+                window.scrollTo({
+                    top: targetSection.offsetTop - 60, // Adjust for navbar height
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
 
     // Footer responsiveness on window resize
     window.addEventListener("resize", function () {
         let footerContainer = document.querySelector(".footer-container");
-        if (footerContainer) {
-            footerContainer.style.flexDirection = window.innerWidth < 768 ? "column" : "row";
+        if (window.innerWidth < 768) {
+            footerContainer.style.flexDirection = "column";
+        } else {
+            footerContainer.style.flexDirection = "row";
         }
     });
 });
