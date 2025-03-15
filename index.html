@@ -28,7 +28,7 @@
   </header>
 
   <!-- Home Section (Mac Terminal Style, Fullscreen) -->
-  <section id="home" class="section full-section">
+<section id="home" class="section full-section">
     <div class="terminal">
         <div class="terminal-header">
             <div class="buttons">
@@ -44,12 +44,15 @@
             <p class="command" id="line3"></p> <!-- Typing Line 3 -->
             <div class="terminal-buttons">
                 <button class="btn" onclick="scrollToSection('contact')">Get in Touch</button>
-                <a class="btn" href="https://github.com/SumitChaturvedi-184/Portfolio/blob/main/Sumit%20Chaturvedi.pdf" target="_blank">View Resume</a>
-
+                <button class="btn" onclick="toggleResume()">View Resume</button>
+            </div>
+            <div id="resume-container" style="display: none; margin-top: 20px;">
+                <iframe src="Sumit%20Chaturvedi.pdf" width="100%" height="600px"></iframe>
             </div>
         </div>
     </div>
 </section>
+
 
 
 
