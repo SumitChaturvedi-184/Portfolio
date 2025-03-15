@@ -26,32 +26,27 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Function to scroll to a section smoothly
-    window.scrollToSection = function (sectionId) {
-        const targetSection = document.getElementById(sectionId);
-        if (targetSection) {
-            window.scrollTo({
-                top: targetSection.offsetTop - 60, // Adjust for navbar height
-                behavior: "smooth"
-            });
+    // Function to scroll to Contact section
+    document.getElementById("get-in-touch-btn").addEventListener("click", function () {
+        const contactSection = document.getElementById("contact");
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: "smooth" });
         }
-    };
+    });
 
-    // Function to toggle the resume display
-    window.toggleResume = function () {
+    // Function to toggle Resume visibility
+    document.getElementById("view-resume-btn").addEventListener("click", function () {
         const resumeContainer = document.getElementById("resume-container");
-        if (resumeContainer.style.display === "none" || resumeContainer.style.display === "") {
-            resumeContainer.style.display = "block"; // Show resume
-        } else {
-            resumeContainer.style.display = "none"; // Hide resume
-        }
-    };
+        resumeContainer.style.display = (resumeContainer.style.display === "none" || resumeContainer.style.display === "") 
+            ? "block" 
+            : "none";
+    });
 
     // Smooth scrolling for navbar links
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', function (event) {
             event.preventDefault();
-            const targetId = this.getAttribute('href').substring(1); // Remove #
+            const targetId = this.getAttribute('href').substring(1);
             const targetSection = document.getElementById(targetId);
 
             if (targetSection) {
@@ -63,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Footer responsiveness on window resize
+    // Footer responsiveness
     window.addEventListener("resize", function () {
         let footerContainer = document.querySelector(".footer-container");
         if (footerContainer) {
